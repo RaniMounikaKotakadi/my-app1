@@ -3,6 +3,12 @@ pipeline {
 
     stages {
 
+        stage('Prepare') {
+            steps {
+                sh 'npm install'
+            }
+        }
+
         stage('CodeTest') {
             steps {
                 sh 'echo "code testing"'
